@@ -1,0 +1,23 @@
+{{ if eq .chezmoi.os "darwin" -}}
+# Homebrew sbin path
+export PATH="/usr/local/sbin:${PATH}"
+{{- end }}
+
+# XDG Base Directory specification
+# see https://wiki.archlinux.org/index.php/XDG_Base_Directory
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_DATA_HOME="${HOME}/.local/share"
+
+# XDG User Directories specification
+# see https://www.freedesktop.org/wiki/Software/xdg-user-dirs/
+# and https://www.freedesktop.org/software/systemd/man/file-hierarchy.html
+export PATH="${HOME}/.local/bin:${PATH}"
+
+{{ if eq .chezmoi.os "darwin" -}}
+# Add Visual Studio Code (code)
+export PATH="${PATH}:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+export PATH="${PATH}:/Applications/MacVim.app/Contents/bin"
+export PATH="${PATH}:/Applications/VLC.app/Contents/MacOS/VLC"
+{{ end -}}

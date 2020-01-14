@@ -1,9 +1,6 @@
 # iTerm integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# Homebrew sbin path
-export PATH="/usr/local/sbin:${PATH}"
-
 # Antibody init
 source <(antibody init)
 
