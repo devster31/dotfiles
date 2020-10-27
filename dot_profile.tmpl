@@ -3,6 +3,12 @@
 export PATH="/usr/local/sbin:${PATH}"
 {{- end }}
 
+# Customize GOPATH
+export GOPATH="${HOME}/code/go"
+# variable substitution is used for multiple paths
+# appends bin to each colon-separated path
+export PATH="${GOPATH//://bin:}/bin:${PATH}"
+
 # XDG Base Directory specification
 # see https://wiki.archlinux.org/index.php/XDG_Base_Directory
 export XDG_CONFIG_HOME="${HOME}/.config"
