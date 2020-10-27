@@ -1,0 +1,20 @@
+# Direnv stuff
+.direnv
+.envrc
+
+# Shadowenv stuff
+.shadowenv.d/
+
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Editor files #
+################
+*~
+*.swp
+*.swo
+.vscode/
