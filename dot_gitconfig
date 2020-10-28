@@ -18,5 +18,9 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[hub]
+	protocol = https
 [core]
 	excludesfile = ~/.gitignore_global
+[pull]
+	ff = only
