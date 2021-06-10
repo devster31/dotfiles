@@ -1,0 +1,7 @@
+Host dispenser.ovh
+	User devsterknight
+	HostName 91.121.108.175
+	Port 22222
+
+Host osmc
+	User osmc
