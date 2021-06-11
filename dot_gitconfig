@@ -1,7 +1,7 @@
 [user]
 	email = daniele.riccucci@gmail.com
 	name = Daniele Riccucci
-	signingKey = ""
+	signingKey = 61FD29F51A7B103976A0C78511907E80E78500F1
 [commit]
 	gpgSign = false
 [tag]
