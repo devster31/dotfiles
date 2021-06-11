@@ -1,3 +1,6 @@
+# Ansible
+.galaxy_install_info
+
 # Direnv stuff
 .direnv
 .envrc
@@ -18,3 +21,7 @@ Thumbs.db
 *.swp
 *.swo
 .vscode/
+
+# Python virtual env #
+######################
+.venv/
