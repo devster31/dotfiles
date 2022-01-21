@@ -30,14 +30,6 @@ plugins=(
 	# httpie
 )
 
-# omz
-antibody bundle ohmyzsh/ohmyzsh
-
-antibody bundle zsh-users/zsh-syntax-highlighting
-antibody bundle zsh-users/zsh-autosuggestions
-
-antibody bundle denysdovhan/spaceship-prompt
-
 # Spaceship configuration
 # from https://denysdovhan.com/spaceship-prompt/docs/Options.html
 SPACESHIP_PROMPT_ADD_NEWLINE="false"
@@ -67,7 +59,7 @@ DISABLE_AUTO_UPDATE="true"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -105,6 +97,14 @@ COMPLETION_WAITING_DOTS="true"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# omz
+antibody bundle ohmyzsh/ohmyzsh
+
+antibody bundle zsh-users/zsh-syntax-highlighting
+antibody bundle zsh-users/zsh-autosuggestions
+
+antibody bundle denysdovhan/spaceship-prompt
 
 # direnv
 if [[ -x "$(which direnv 2>/dev/null)" ]]; then
