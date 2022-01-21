@@ -24,3 +24,12 @@
 	excludesfile = ~/.gitignore_global
 [pull]
 	ff = only
+{{ if eq .chezmoi.os "darwin" -}}
+[difftool "Kaleidoscope"]
+       cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+       cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+       trustexitcode = true
+{{- end }}
+[init]
+       defaultBranch = master
