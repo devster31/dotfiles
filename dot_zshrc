@@ -1,14 +1,10 @@
 # iTerm integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+source /usr/local/opt/antidote/share/antidote/antidote.zsh
+
 # Antibody init
-source <(antibody init)
-
-# Path to antibody home
-export ANTIBODY_HOME="$(antibody home)"
-
-# Path to your oh-my-zsh installation.
-export ZSH="$ANTIBODY_HOME"/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh
+source <(antidote init)
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -98,13 +94,7 @@ COMPLETION_WAITING_DOTS="true"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# omz
-antibody bundle ohmyzsh/ohmyzsh
-
-antibody bundle zsh-users/zsh-syntax-highlighting
-antibody bundle zsh-users/zsh-autosuggestions
-
-antibody bundle denysdovhan/spaceship-prompt
+antidote bundle < ~/.zsh_plugins.txt
 
 # direnv
 if [[ -x "$(which direnv 2>/dev/null)" ]]; then
