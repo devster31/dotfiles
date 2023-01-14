@@ -26,12 +26,6 @@ plugins=(
 	# httpie
 )
 
-# Spaceship configuration
-# from https://denysdovhan.com/spaceship-prompt/docs/Options.html
-SPACESHIP_PROMPT_ADD_NEWLINE="false"
-SPACESHIP_BATTERY_THRESHOLD=20
-SPACESHIP_EXIT_CODE_SHOW=true
-
 # this is the antibody way of loading omz plugins if you don't use the plugins variable
 #antibody bundle "
 #	robbyrussell/oh-my-zsh path:plugins/git
