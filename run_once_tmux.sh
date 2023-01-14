@@ -1,17 +1,6 @@
 #!/usr/bin/env sh
 
-git_clone_idempotent ()
-{
-    REPO="$1"
-    DEFAULT_FOLDER="$(echo "$REPO" | sed 's|.*/||' | sed 's|.git$||')"
-    FOLDER="${2:-$DEFAULT_FOLDER}"
+export ANSIBLE_INVENTORY_UNPARSED_WARNING=False
+export ANSIBLE_LOCALHOST_WARNING=False
 
-    if [ -d "$FOLDER" ]; then
-        cd "$FOLDER"
-        git pull
-    else
-        git clone "$REPO" "$FOLDER"
-    fi
-}
-
-git_clone_idempotent https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+ansible -m git -a 'repo=https://github.com/tmux-plugins/tpm dest=~/.tmux/plugins/tpm' localhost
