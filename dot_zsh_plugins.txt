@@ -2,22 +2,22 @@
 
 # comments are supported like this
 ohmyzsh/ohmyzsh
-denysdovhan/spaceship-prompt
+spaceship-prompt/spaceship-prompt
 rupa/z
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
 zsh-users/zsh-syntax-highlighting
+
+# frameworks like oh-my-zsh supported
+getantidote/use-omz  # handle OMZ dependencies
+ohmyzsh/ohmyzsh path:lib   # load OMZ's library
+ohmyzsh/ohmyzsh path:plugins/brew
 
 # empty lines are skipped
 
 # annotations are also allowed:
 #romkatv/zsh-bench kind:path
 #olets/zsh-abbr    kind:defer
-
-# frameworks like oh-my-zsh are supported
-#ohmyzsh/ohmyzsh path:lib
-#ohmyzsh/ohmyzsh path:plugins/colored-man-pages
-#ohmyzsh/ohmyzsh path:plugins/magic-enter
 
 # or lighter-weight ones like zsh-utils
 #belak/zsh-utils path:editor
