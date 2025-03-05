@@ -1,1 +1,5 @@
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+
+# Added by Toolbox App
+export PATH="$PATH:/usr/local/bin"
+
