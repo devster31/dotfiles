@@ -1,7 +1,6 @@
-Host dispenser.ovh
-	User devsterknight
-	HostName 91.121.108.175
-	Port 22222
+ControlMaster	auto
+ControlPath	~/.ssh/control-%C
+ControlPersist	30m
 
 Host osmc
 	User osmc
